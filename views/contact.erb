@@ -1,0 +1,18 @@
+<h1>First Name:<br> <%= @contact.first_name() %></h1>
+<h1>Last Name:<br> <%= @contact.last_name() %></h1>
+<h1>Job Title:<br> <%= @contact.job_title() %></h1>
+<h1>Company:<br> <%= @contact.company() %></h1>
+
+<ul>
+  <% @contact.mail_addresses().each() do |address| %>
+    <li><a href="/contacts/<%= @contact.id()%>/address/<%= address.id() %>"><%= address.type %> <%= address.city %>, <%= address.state() %></a></li>
+  <% end %>
+</ul>
+
+<a href="/contacts/<%= @contact.id1%>/address/new">Add Mailing Address</a>
+<a href="#">Add Phone Number</a>
+<a href="#">Add Email</a>
+
+
+<a href="/">Home</a>
+<a href="/contacts">Back to Contacts</a>

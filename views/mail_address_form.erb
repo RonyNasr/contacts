@@ -1,0 +1,20 @@
+<h1>Add Mailing Address to <%= @contact.first_name() %></h1>
+
+<form action="/contacts/<%= @contact.id() %>" method="post">
+  <label for="type">Type:</label>
+  <input type="text" name="type" id="type">
+
+  <label for="street">Street:</label>
+  <input type="text" name="street" id="street">
+
+  <label for="city">City:</label>
+  <input type="text" name="city" id="city">
+
+  <label for="state">State:</label>
+  <input type="text" name="state" id="state">
+
+  <label for="zip">Zip Code:</label>
+  <input type="text" name="zip" id="zip">
+
+  <button type="submit" id="submit">Add Address</button>
+</form>
